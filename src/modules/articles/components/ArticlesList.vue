@@ -20,7 +20,7 @@
   export default class ArticlesList extends Vue {
     @Prop() articles!: Article[];
 
-    goToDetail(articleId) {
+    goToDetail(articleId: string): void {
       this.$router.push({ name: 'articleDetail', params: { id: articleId } })
     }
   }
